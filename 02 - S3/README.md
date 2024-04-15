@@ -45,12 +45,27 @@ Now uncheck the option **Block all public access**, **Save changes** and **Confi
 
 Now, we will see two forms to make public a S3 public.
 First using ACL(Access Control List).
-**NOTE**: A majority of modern use cases in Amazon S3 no longer require the use of ACLs. Follow to more:https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html
+
+**NOTE**: A majority of modern use cases in Amazon S3 no longer require the use of ACLs.
+Follow to more:https://docs.aws.amazon.com/AmazonS3/latest/userguide/about-object-ownership.html
 
 Go to your file permissions and click on **owner enforced** the object is enable the **ACLs**
 ![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/48879c89-1ccd-402e-afa1-9aa6f5197ab9)
 
 **Click on** ACLs Enable
+
 ![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/eba40a3e-1581-4c6a-8092-bd27bb58da4b)
 
-Second, by 
+We need to make those files public one at a time. Now, go back to your file, check it, and click on Actions, then select **Make public using ACL**
+
+![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/ba418807-1f67-4383-a70f-ac545a006d0f)
+
+**Make Public**
+
+![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/c0548dc5-30af-41fc-9dcd-c81264af364d)
+
+Then you can F5 your image page to see the image.
+
+![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/61c68b4d-187d-4302-9a34-3ff25dfcabfe)
+
+Another form to make public your bucket(recommended) is using Bucket Policies
