@@ -32,7 +32,7 @@ At this point, you will encounter an **AccessDenied** message as shown bellow. I
 
 ![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/512bb08b-4d3e-41f8-89eb-6b6be0be6736)
 
-So now we have to make public this bucket to be able to acess it content.
+So now we have to make public this bucket to be able to access it content.
 We can setting the bucket public with **ACLs** and using **Bucket Policies**
 
 First go to bucket **Permissions** and click on edit in **Block public access(bucket settings)**
@@ -64,8 +64,32 @@ We need to make those files public one at a time. Now, go back to your file, che
 
 ![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/c0548dc5-30af-41fc-9dcd-c81264af364d)
 
-Then you can F5 your image page to see the image.
+Then you can F5 your page to see the image.
 
 ![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/61c68b4d-187d-4302-9a34-3ff25dfcabfe)
 
-Another form to make public your bucket(recommended) is using Bucket Policies
+Another way to make public your bucket(recommended) is using Bucket Policies
+Go to your bucket -> click on **Permissions** and look for **Edit** in **Bucket polocy**
+
+You can use does AWS Policy Generator for that follow https://awspolicygen.s3.amazonaws.com/policygen.html
+
+**Select Type of Policy** in this case **S3 Bucket Policy**
+**Effect** is **Allow** we can allow user or service to access our bucket
+
+In **Principal** put which user or service will be able to access the bucket. We will use * for full access.
+
+In **Actions** search for **GetObject**
+
+![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/27e26bc6-3dc4-4408-948b-6aee8dd25503)
+
+Now, we need inform which bucket we will allow access. Go back to your bucket and copy the **Bucket ARN**
+
+![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/3ebdc123-688d-48d8-9b63-61c8d9d75afa)
+
+Paste in **Amazon Resource Name(ARN)** and click on **Add Statement**
+
+![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/22cf35e7-d347-43c0-8f9e-16ee482847d5)
+
+After that, click on **Generator Police** then copy and paste thoses informations in your **Policy bucket**
+
+![image](https://github.com/thyagomelo02/labs-aws-solutions-architect-associate/assets/31568098/881a6141-f532-4755-b949-ed01d05f4fa8)
